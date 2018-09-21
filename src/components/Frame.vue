@@ -1,15 +1,24 @@
 <template>
   <div class="leon-frame">
     <Header />
+    <div class="main clearfix">
+        <LeftColumn />
+        <CenterColumn />
+    </div>
   </div>
 </template>
 
 <script>
 import Header from './editViews/Header'
+import LeftColumn from './editViews/LeftColumn'
+import CenterColumn from './editViews/CenterColumn'
+
 export default {
   name: 'Frame',
   components: {
-    'Header': Header
+    'Header': Header,
+    'LeftColumn': LeftColumn,
+    'CenterColumn': CenterColumn
   },
   data () {
     return {
@@ -20,19 +29,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style lang="scss">
+  .leon-frame {
+    .main {
+      min-height: 888px;
+    }
+  }
 </style>

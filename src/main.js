@@ -9,6 +9,9 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // 引入fontawsome字体库
 import 'font-awesome/css/font-awesome.min.css'
+// 引入基础css
+import '../src/assets/scss/base.scss'
+Vue.use(ElementUI);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
