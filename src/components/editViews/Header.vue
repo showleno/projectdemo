@@ -40,8 +40,10 @@ export default {
                 height: 70px;
             }
             .header_btn {
-                width: 86%;
-                padding: 20px;
+                width: 100%;
+                height: 70px;
+                @include boxSizing();
+                padding: 20px 20px 20px 196px;
                 .table_tab {
                     border: 1px solid #303e4c;
                     box-shadow: 0 5px 5px #182d66;

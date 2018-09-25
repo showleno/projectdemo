@@ -1,5 +1,5 @@
 <template>
-      <div class="right_column left">
+      <div class="right_column" :style="{'height': sidebarHeight + 'px' }">
             <div class="toggle_btn">
                 <a class="btn"><i class="fa fa-chevron-up"></i>页面区</a>
             </div>
@@ -11,7 +11,8 @@
 </template>
 <script>
     export default {
-        name: 'RightColumn'
+        name: 'RightColumn',
+        props: ['sidebarHeight'],
     }
 </script>
 <style lang="scss">
@@ -20,6 +21,9 @@
             .right_column {
                 width: 100px;
                 min-height: 848px;
+                position: absolute;
+                right: 0;
+                top: 0;
                 background-color: #1c2d40;
                 .toggle_btn {
                     a {

@@ -74,3 +74,149 @@ em {
 .right {
     float: right;
 }
+.page, .field {
+    position: relative;
+}
+.edit:hover:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border:1px dashed #468ef2;
+    display:block;
+    width:100%;
+    height:100%;
+    cursor: pointer;
+    box-sizing:border-box;
+    z-index:10;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUY5RkFFQjNFRjhEMTFFNzgxRjhFNzJGNzE3QzhDODciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUY5RkFFQjRFRjhEMTFFNzgxRjhFNzJGNzE3QzhDODciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RjlGQUVCMUVGOEQxMUU3ODFGOEU3MkY3MTdDOEM4NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RjlGQUVCMkVGOEQxMUU3ODFGOEU3MkY3MTdDOEM4NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjSDDrQAAAAbSURBVHjaYnz45s9mBiIAEwORYFQhdRQCBBgAnggDkJwJn2oAAAAASUVORK5CYII=");
+}
+.widFull {
+    width: 100%;
+}
+.wid980 {
+    width: 980px;
+}
+.inner {
+    margin: 0 auto;
+    .but {
+        position: absolute;
+        right: 0;
+        top:0;
+        border:3px solid #7e8998;
+        z-index:11;
+        display: none;
+        &.nav_set_but {
+            right: 0;
+        }
+        &.nav_style_but {
+            right:110px;
+        }
+        a {
+            display:block;
+            width:94px;
+            height:40px;
+            background-color:#fff;
+            text-align:center;
+            line-height:40px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &.edit:hover {
+        .but {
+            display: block;
+        }
+    }
+}
+
+body {
+    overflow: hidden;
+}
+.loadHtml {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.nav_text_color {
+    color: #fff;
+}
+.nav_bg_color {
+    background-color: #a66d52;
+}
+.top_btn_bg {
+    background-color: #5da7ae;
+}
+
+// 侧边栏共同样式
+.operation_panel {
+    width:194px;
+    padding:0 13px;
+    overflow: hidden;
+    > h3 {
+        text-align:center;
+        padding:16px 0;
+        position:relative;
+        span {
+            font-size:14px;
+            font-weight:normal;
+            position:relative;
+            z-index:10;
+            background-color:#283c50;
+            padding:0px 14px;
+            color:#fff;
+        }
+        &:after {
+            content:"";
+            height:1px;
+            width:100%;
+            background-color:#3a4f63;
+            position:absolute;
+            top:28px;
+            left:0;
+        }
+    }
+    .tab_title {
+        height:30px;
+        margin-bottom: 20px;
+        a {
+            width:96px;
+            height:30px;
+            text-align:center;
+            float:left;
+            color:#fff;
+            background-color:#142335;
+            line-height:30px;
+            position:relative;
+            &:before {
+                content:"";
+                width:1px;
+                height:100%;
+                background-color:#313a46;
+                position:absolute;
+                left:0;
+                top:0;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+            &.on {
+                background:url("../../../static/images/bj_b.jpg");
+            }
+        }
+    }
+    .el-input__inner {
+        line-height: 30px;
+        height: 30px;
+    }
+    .el-input__icon {
+        line-height: 30px;
+    }
+    .el-select {
+        .el-input {
+            .el-select__caret {
+                color: #142336;
+            }
+        }
+    }
+}

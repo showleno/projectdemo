@@ -1,5 +1,5 @@
 <template>
-      <div class="center_column ">
+      <div class="center_column left">
           <div class="tab_page">
               <ul class="clearfix">
                   <li class="on"><a href="">首页</a><i class="fa fa-close"></i></li>
@@ -7,10 +7,9 @@
               </ul>
           </div>
             <div class="tab_main clearfix">
-                <div class="loadHtml left">
+                <div class="loadHtml left" :style="{ 'height' : mainHeight + 'px'}" >
                     <Index />
                 </div>
-                <RightColumn />
             </div>
       </div>
 </template>
@@ -22,17 +21,20 @@ export default {
     components: {
         'RightColumn': RightColumn,
         'Index': Index
-    }
+    },
+    props: ['mainHeight'],
+    
+    
 }
 </script>
 <style lang="scss">
     @import '../../assets/scss/base.scss';
     .leon-frame {
         .center_column {
-            height: 888px;
             width: 100%;
+            margin: 0 auto;
             @include boxSizing();
-            padding-left: 100px;
+            padding: 0 100px;
             .tab_page {
                 width: 100%;
                 background-color: #1d2c42;
@@ -66,17 +68,14 @@ export default {
             .tab_main {
                 width: 100%;
                 position: relative;
+                background-color: #000;
             }
             .loadHtml {
-                margin-right: -100px;
-                padding-right: 100px;
+                // margin-right: -100px;
+                // padding-right: 100px;
                 width: 100%;
                 @include boxSizing();
-                height: 888px;
-                .hell {
-                    background: #000;
-                    width: 100%;
-                }
+                background-color: #fff;
             }
         }
         

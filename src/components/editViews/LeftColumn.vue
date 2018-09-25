@@ -1,5 +1,5 @@
 <template>
-      <div class="left_column left">
+      <div class="left_column" :style="{'height': sidebarHeight + 'px' }">
           <div class="toggle_btn">
               <a class="btn"><i class="fa fa-align-justify"></i>功能区</a>
           </div>
@@ -29,7 +29,8 @@
 </template>
 <script>
     export default {
-        name: 'LeftColumn'
+        name: 'LeftColumn',
+        props: ['sidebarHeight'],
     }
 </script>
 <style lang="scss">
@@ -53,6 +54,9 @@
             background-color: #1c2d41;
             color: #fff;
             min-height: 888px;
+            position: absolute;
+            left: 0;
+            top: 0;
             .func_module {
                 .mod {
                     margin: 10px 0;
