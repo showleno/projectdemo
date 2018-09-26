@@ -11,6 +11,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'font-awesome/css/font-awesome.min.css'
 // 引入基础css
 import '../src/assets/scss/base.scss'
+// 引入滚动条插件
+import '../src/assets/js/iscroll.js'
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 

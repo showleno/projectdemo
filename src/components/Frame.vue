@@ -7,6 +7,7 @@
         <CenterColumn :mainHeight=mainHeight />
     </div>
     <LeftSideBar :sidebarHeight=sidebarHeight />
+    <RightSideBar :sidebarHeight=sidebarHeight />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import LeftColumn from './editViews/LeftColumn'
 import RightColumn from './editViews/RightColumn'
 import CenterColumn from './editViews/CenterColumn'
 import LeftSideBar from './mtk/LeftSideBar'
+import RightSideBar from './mtk/RightSideBar'
 
 export default {
   name: 'Frame',
@@ -25,6 +27,7 @@ export default {
     'CenterColumn': CenterColumn,
     'RightColumn': RightColumn,
     'LeftSideBar': LeftSideBar,
+    'RightSideBar': RightSideBar,
   },
   data () {
     return {
