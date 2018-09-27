@@ -23,7 +23,7 @@
                                                         v-model="logo_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                                 <input type="hidden" class="doesShow" value="">
                                             </div>
@@ -61,7 +61,7 @@
                                                         class="webName_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -103,7 +103,7 @@
                                                                 v-model="title_isShow"
                                                                 active-color="#0c6eff"
                                                                 inactive-color="#ccc"
-                                                                width="50">
+                                                                >
                                                         </el-switch>
                                                     </div>
                                                 </div>
@@ -153,7 +153,7 @@
                                                                 v-model="title_isShow"
                                                                 active-color="#0c6eff"
                                                                 inactive-color="#ccc"
-                                                                width="50">
+                                                                >
                                                         </el-switch>
                                                     </div>
                                                 </div>
@@ -193,7 +193,7 @@
                                                         v-model="title_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -241,7 +241,7 @@
                                                         v-model="title_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -283,7 +283,7 @@
                                                             v-model="title_isShow"
                                                             active-color="#0c6eff"
                                                             inactive-color="#ccc"
-                                                            width="50">
+                                                            >
                                                     </el-switch>
                                                 </div>
                                             </div>
@@ -333,7 +333,7 @@
                                                                 v-model="title_isShow"
                                                                 active-color="#0c6eff"
                                                                 inactive-color="#ccc"
-                                                                width="50">
+                                                                >
                                                         </el-switch>
                                                     </div>
                                                 </div>
@@ -373,7 +373,7 @@
                                                         v-model="title_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -421,7 +421,7 @@
                                                         v-model="title_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -899,7 +899,7 @@
                                                                 v-model="title_isShow"
                                                                 active-color="#0c6eff"
                                                                 inactive-color="#ccc"
-                                                                width="50">
+                                                                >
                                                         </el-switch>
                                                     </div>
                                                 </div>
@@ -949,7 +949,7 @@
                                                                 v-model="title_isShow"
                                                                 active-color="#0c6eff"
                                                                 inactive-color="#ccc"
-                                                                width="50">
+                                                                >
                                                         </el-switch>
                                                     </div>
                                                 </div>
@@ -989,7 +989,7 @@
                                                         v-model="title_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -1037,7 +1037,7 @@
                                                         v-model="title_isShow"
                                                         active-color="#0c6eff"
                                                         inactive-color="#ccc"
-                                                        width="50">
+                                                        >
                                                 </el-switch>
                                             </div>
                                         </div>
@@ -1184,7 +1184,7 @@
                                                             v-model="title_isShow"
                                                             active-color="#0c6eff"
                                                             inactive-color="#ccc"
-                                                            width="50">
+                                                            >
                                                     </el-switch>
                                                 </div>
                                             </div>
@@ -1327,7 +1327,7 @@
                                                     v-model="title_isShow"
                                                     active-color="#0c6eff"
                                                     inactive-color="#ccc"
-                                                    width="50">
+                                                    >
                                             </el-switch>
                                         </div>
                                     </div>
@@ -1353,6 +1353,8 @@
                 webName_isShow: '',
                 title_size: '',
                 title_height: '',
+                title_marBot: '',
+                title_marTop: '',
                 title_isShow: '',
                 right_tab_2: 'color',
                 right_tab_3: 'color',
@@ -1370,7 +1372,7 @@
     .leon-frame {
         .rightSideBar {
             position: fixed;
-            right: 100px;
+            right: -220px;
             top: 70px;
             background-color: #283c50;
             overflow: hidden;

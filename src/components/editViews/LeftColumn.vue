@@ -53,7 +53,6 @@
             width: 100px;
             background-color: #1c2d41;
             color: #fff;
-            min-height: 888px;
             position: absolute;
             left: 0;
             top: 0;

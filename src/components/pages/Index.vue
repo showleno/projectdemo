@@ -150,6 +150,77 @@
 	        </div>
             <div class="content">
                 <div class="inner wid980">
+                    <div class="field_wra clearfix">
+                        <div class="field left wid240">
+                                <div class="line_2 addMod edit isDraggable">
+                                    <div class="addModT_sty">
+                                        <i></i>
+                                        <p>添加栏目0</p>
+                                    </div>
+                                    <i class="drag"></i>
+                                </div>
+                                <div class="line_2 addMod edit isDraggable">
+                                    <div class="addModT_sty">
+                                        <i></i>
+                                        <p>添加栏目5</p>
+                                    </div>
+                                    <i class="drag"></i>
+                                </div>
+                        </div>
+                        <div class="field left wid480">
+                                <div class="line_1 addMod edit isDraggable">
+                                    <div class="addModT_sty">
+                                        <i></i>
+                                        <p>添加栏目2</p>
+                                    </div>
+                                    <i class="drag"></i>
+                                </div>
+                        </div>
+                        <div class="field left wid240">
+                                <div class="line_1 addMod edit isDraggable">
+                                    <div class="addModT_sty">
+                                        <i></i>
+                                        <p>添加栏目7</p>
+                                    </div>
+                                    <i class="drag"></i>
+                                </div>
+                        </div>
+                        <div class="edi_line">
+                            <div class="layout_set left clearfix">
+                                <div class="layout">
+                                    <p class="new_layout">
+                                        <i class="fa fa-plus"></i>新增布局</p>
+                                    <p class="copy_layout">
+                                        <i class="fa fa-files-o"></i>复制布局</p>
+                                </div>
+                                <div class="up_down">
+                                    <p class="up">
+                                        <i class="fa fa-arrow-up"></i>
+                                    </p>
+                                    <p class="down">
+                                        <i class="fa fa-arrow-down"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lay_hei right clearfix">
+                                <div class="hei_set left clearfix">
+                                    <span class="left">高度:</span>
+                                    <label class="left">
+                                        <input type="radio" checked="" value="默认">
+                                        <i></i>默认
+                                    </label>
+                                    <label  class="left">
+                                        <input type="radio" value="加高">
+                                        <i></i>加高
+                                    </label>
+                                </div>
+                                <div class="lay_but left">
+                                    <p class="changeLayout">换布局</p>
+                                    <p class="delMod">删除</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="field_wra">
                         <div class="edit field">
                             <div class="addLine">
@@ -221,9 +292,25 @@
     </div>
 </template>
 <script>
+import {Swappable, Plugins} from '@shopify/draggable';
 export default {
   name: "Index",
-  
+  mounted() {
+      const containers = document.querySelectorAll('.field_wra .field');
+
+        if (containers.length === 0) {
+            return false;
+        }
+
+        const swappable = new Swappable(containers, {
+            draggable: '.isDraggable',
+            mirror: {
+                constrainDimensions: true,
+            },
+            plugins: [Plugins.ResizeMirror]
+        });
+        swappable.on('swappable:start', () => console.log(this, event));
+  },
 };
 </script>
 <style lang="scss">
@@ -253,6 +340,7 @@ export default {
             a {
             padding: 0 12px;
             position: relative;
+            color: #444;
             &:before {
                 content: "";
                 width: 1px;
@@ -472,6 +560,53 @@ export default {
         min-height: 150px;
         .field_wra {
             margin-bottom: 10px;
+            width: 100%;
+            position: relative;
+            .field {
+                margin-left: 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            .line_0 {
+                overflow: hidden;
+                min-height: inherit;
+                height: 640px;
+                &.addMod {
+                    min-height: inherit;
+                    height: 638px;
+                }
+                .list_ul,
+                .list_cont {
+                    height: 600px;
+                }
+            }
+            .line_1 {
+                overflow: hidden;
+                min-height: inherit;
+                height: 320px;
+                &.addMod {
+                    min-height: inherit;
+                    height: 320px;
+                }
+                .list_ul,
+                .list_cont {
+                    height: 280px;
+                }
+            }
+            .line_2 {
+                overflow: hidden;
+                min-height: inherit;
+                height: 160px;
+                &.addMod {
+                    min-height: inherit;
+                    height: 160px;
+                }
+                .list_ul,
+                .list_cont {
+                    height: 120px;
+                }
+            }
             .addLine {
                 color:#237efe;
                 text-align:center;
@@ -495,6 +630,159 @@ export default {
                          margin-right:20px;
                      }
                  }
+            }
+            .addMod {
+                border: 1px dashed #ccc;
+                cursor: pointer !important;
+                min-height: 320px;
+                position: relative;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .addModT_sty {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                z-index: 11;
+                line-height: 26px;
+                margin: -31px 0 0 -28px;
+                i {
+                    width: 30px;
+                    height: 30px;
+                    background: url("../../../static/images/icoimg.png") no-repeat;
+                    display: inline-block;
+                }
+            }
+            &:hover {
+                .edi_line {
+                    display: block;
+                    animation: flipInX .5s;
+                    -webkit-animation: flipInX .5s;
+                    -moz-animation: flipInX .5s;
+                    -o-animation: flipInX .5s;
+                }
+            }
+            .edi_line {
+                float: none;
+                margin: 0;
+                background-color: #fff;
+                position: absolute;
+                top: -50px;
+                left: 0;
+                border: 3px solid #7e8998;
+                width: 100%;
+                box-sizing: border-box;
+                height: 50px;
+                z-index: 11;
+                display: none;
+                p {
+                    text-align: center;
+                    line-height: 44px;
+                    border-right: 1px solid #e5e5e5;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #f1f1f1;
+                    }
+                    i {
+                        color: #237efe;
+                    }
+                }
+                .layout_set {
+                     .layout,
+                     .up_down {
+                         float: left;
+                         p {
+                             float: left;
+                             &:hover {
+                                background-color: #7e8998;
+                                color: #fff;
+                                i {
+                                    color: #fff;
+                                }
+                            }
+                         }
+                     }
+                     .layout {
+                         p {
+                             width: 110px;
+                             i {
+                                 color: #237efe;
+	                            margin-right: 6px;
+                             }
+                         }
+                     }
+                     .up_down {
+                         p {
+                             width: 60px;
+                         }
+                     }
+                }
+                 .lay_hei {
+                    .lay_but {
+                        p {
+                            float: left;
+                            text-align: center;
+                            line-height: 44px;
+                            border-left: 1px solid #e5e5e5;
+                            cursor: pointer;
+                            width: 80px;
+                            &:hover {
+                                background-color: #7e8998;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .hei_set {
+                        line-height: 44px;
+                        span {
+                            margin-right: 8px;
+                        }
+                        label {
+                            margin-right: 12px;
+                        position: relative;
+                        input {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+                            /*兼容ie8及以下*/
+                            -khtml-opacity: 0;
+                            -moz-opacity: 0;
+                            filter: alpha(opacity=0);
+                            opacity: 0;
+                            &:checked + i {
+                                background-position: 0px 0px;
+                            }
+                            input[type='field'] {
+                                &.up_down {
+                                    p:first-child {
+                                        cursor: not-allowed;
+                                        i {
+                                            color: #999;
+                                        }
+                                    }
+                                    p:last-child {
+                                        cursor: not-allowed;
+                                        i {
+                                            color: #999;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        i {
+                            background: url("../../../static/images/radio_ico.png") no-repeat -18px 0px;
+                            width: 16px;
+                            height: 16px;
+                            float: left;
+                            margin: 14px 6px 0 0;
+                        }
+                        }
+                    }
+                }
             }
         }
     }

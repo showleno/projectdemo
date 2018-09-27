@@ -13,6 +13,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import '../src/assets/scss/base.scss'
 // 引入滚动条插件
 import '../src/assets/js/iscroll.js'
+
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 

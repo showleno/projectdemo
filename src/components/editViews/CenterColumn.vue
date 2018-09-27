@@ -7,7 +7,7 @@
               </ul>
           </div>
             <div class="tab_main clearfix">
-                <div class="loadHtml left" :style="{ 'height' : mainHeight + 'px'}" >
+                <div class="loadHtml" :style="{ 'height' : mainHeight + 'px'}" >
                     <Index />
                 </div>
             </div>
@@ -23,7 +23,10 @@ export default {
         'Index': Index
     },
     props: ['mainHeight'],
-    
+    mounted() {
+        // var loadHtml = new IScroll('.loadHtml', { mouseWheel: true });
+        
+    },
     
 }
 </script>
@@ -75,6 +78,8 @@ export default {
                 // padding-right: 100px;
                 width: 100%;
                 @include boxSizing();
+                overflow-x: hidden;
+                overflow-y: auto;
                 background-color: #fff;
             }
         }

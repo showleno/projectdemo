@@ -1,7 +1,7 @@
 <template>
   <div class="leon-frame">
     <Header />
-    <div class="main clearfix">
+    <div class="main clearfix" :style="{'height': sidebarHeight + 'px' }">
         <LeftColumn :sidebarHeight=sidebarHeight />
         <RightColumn :sidebarHeight=sidebarHeight />
         <CenterColumn :mainHeight=mainHeight />
@@ -40,7 +40,7 @@ export default {
   },
   methods : {
       computHeight: function() {
-          var height = document.body.clientHeight || document.documentElement.clientHeight;
+          var height =  document.documentElement.clientHeight;
           this.sidebarHeight = height - 70;
           this.mainHeight = height - 110;
       }
@@ -52,7 +52,7 @@ export default {
 <style lang="scss">
   .leon-frame {
     .main {
-      min-height: 888px;
+      // min-height: 888px;
       position: relative;
     }
   }

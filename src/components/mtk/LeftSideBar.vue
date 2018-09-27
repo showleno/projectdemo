@@ -605,7 +605,7 @@
     .leon-frame {
         .leftSideBar {
             position: fixed;
-            left: 100px;
+            left: -220px;
             top: 70px;
             background-color: #283c50;
             overflow: hidden;
@@ -618,104 +618,172 @@
             }
             .layout {
                 display: none;
-                .tab_con {
-                    .tab_item {
-                        li {
-                            position: relative;
-                            margin-bottom: 30px;
-                            border-radius: 4px;
-                            border: 3px solid #fff;
-                            cursor: pointer;
-                            p {
-                                position:absolute;
-                                bottom:0;
-                                left:50%;
-                                display:none;
-                                background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJERTU4RDlEOTlBMTFFNzkyMzlDRDk1Q0EzRTlDMkYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJERTU4REFEOTlBMTFFNzkyMzlDRDk1Q0EzRTlDMkYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkRFNThEN0Q5OUExMUU3OTIzOUNEOTVDQTNFOUMyRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkRFNThEOEQ5OUExMUU3OTIzOUNEOTVDQTNFOUMyRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pq5lqG0AAAAPSURBVHjaYmBgYDAGCDAAADgANJK9jDAAAAAASUVORK5CYII=");
-                                margin-left:-18px;
-                                margin-bottom:-18px;
-                                padding:3px;
+                .tab_item {
+                    li {
+                        position: relative;
+                        margin-bottom: 30px;
+                        border-radius: 4px;
+                        border: 3px solid #fff;
+                        cursor: pointer;
+                        p {
+                            position:absolute;
+                            bottom:0;
+                            left:50%;
+                            display:none;
+                            background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDJERTU4RDlEOTlBMTFFNzkyMzlDRDk1Q0EzRTlDMkYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDJERTU4REFEOTlBMTFFNzkyMzlDRDk1Q0EzRTlDMkYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MkRFNThEN0Q5OUExMUU3OTIzOUNEOTVDQTNFOUMyRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MkRFNThEOEQ5OUExMUU3OTIzOUNEOTVDQTNFOUMyRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pq5lqG0AAAAPSURBVHjaYmBgYDAGCDAAADgANJK9jDAAAAAASUVORK5CYII=");
+                            margin-left:-18px;
+                            margin-bottom:-18px;
+                            padding:3px;
+                            border-radius:50%;
+                            span {
+                                line-height:30px;
+                                display:block;
+                                width:30px;
+                                height:30px;
                                 border-radius:50%;
-                                span {
-                                    line-height:30px;
-                                    display:block;
-                                    width:30px;
-                                    height:30px;
-                                    border-radius:50%;
-                                    color:#ff422c;
-                                    font-size:18px;
-                                    text-align:center;
-                                    background-color:#fff;
-                                }
-                            }
-                            &:hover {
-                                border-color: #0e61db;
-                                box-shadow: 0 0 18px #0e61db;
-                                p {
-                                    display: block;
-                                }
+                                color:#ff422c;
+                                font-size:18px;
+                                text-align:center;
+                                background-color:#fff;
                             }
                         }
-                        table {
-                            width:100%;
-                            height:77px;
-                            border:7px solid #fff;
-                            border-collapse: collapse;
-                            border-spacing: 0;
-                             .proportion_2_1 {
-                                 width: 110px;
-                             }
-                              .proportion_2_2 {
-                                  border-left:10px solid #fff;
-                              }
-                              .proportion_3_1, 
-                              .proportion_3_2, 
-                              .proportion_3_3 {
-                                  width:46px;
-                              }
-                              .proportion_3_2,
-                              .proportion_4_2 {
-                                  border-left:11px solid #fff;
-                                 border-right:11px solid #fff;
-                              }
-                              .proportion_4_1 {
-                                  width:40px;
-                              }
-                              .proportion_5_1,
-                              .proportion_5_2 {
-                                  width:75px;
-                              }
-                              .proportion_5_2 {
-                                  border-left:11px solid #fff;
-                              }
-                              .proportion_6_1 {
-                                  width:120px;
-                              }
-                              .proportion_6_2 {
-                                  width:30px;
-                                  border-left:10px solid #fff;
-                              }
-                              .proportion_7_1 {
-                                  width: 40px;
-                              }
-                              .proportion_7_2 {
-                                 width:98px;
-                                 border-left:10px solid #fff;
-                              }
+                        &:hover {
+                            border-color: #0e61db;
+                            box-shadow: 0 0 18px #0e61db;
+                            p {
+                                display: block;
+                            }
                         }
+                    }
+                    table {
+                        width:100%;
+                        height:77px;
+                        border:7px solid #fff;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                            .proportion_2_1 {
+                                width: 110px;
+                            }
+                            .proportion_2_2 {
+                                border-left:10px solid #fff;
+                            }
+                            .proportion_3_1, 
+                            .proportion_3_2, 
+                            .proportion_3_3 {
+                                width:46px;
+                            }
+                            .proportion_3_2,
+                            .proportion_4_2 {
+                                border-left:11px solid #fff;
+                                border-right:11px solid #fff;
+                            }
+                            .proportion_4_1 {
+                                width:40px;
+                            }
+                            .proportion_5_1,
+                            .proportion_5_2 {
+                                width:75px;
+                            }
+                            .proportion_5_2 {
+                                border-left:11px solid #fff;
+                            }
+                            .proportion_6_1 {
+                                width:120px;
+                            }
+                            .proportion_6_2 {
+                                width:30px;
+                                border-left:10px solid #fff;
+                            }
+                            .proportion_7_1 {
+                                width: 40px;
+                            }
+                            .proportion_7_2 {
+                                width:98px;
+                                border-left:10px solid #fff;
+                            }
                     }
                 }
             }
             .beauty {
-                .tab_con {
-                    .tab_item {
-                        height: 750px;
-                        float: left;
-                        position: relative;
-                        margin-right: 20px;
-                        width: 192px;
-                        overflow: hidden;
-                       
+                .tab_item {
+                    height: 750px;
+                    float: left;
+                    position: relative;
+                    margin-right: 20px;
+                    width: 192px;
+                    overflow: hidden;
+                    .main_vice {
+                        li {
+                            margin-top:10px;
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                            .on {
+                                background-color:#182839;
+                               .color_checked {
+                                   i {
+                                       color:#2fa0ff;
+                                       text-shadow:0 5px 13px #2045d7;
+                                   }
+                                }
+                            }
+                            label {
+                                width:100%;
+                                height:40px;
+                                background-color:#3a4f63;
+                                display:block;
+                                cursor:pointer;
+                                &:hover {
+                                    background-color:#1c2d41;
+                                    &:before {
+                                        animation: hovercolor 0.8s;
+                                        -moz-animation: hovercolor 0.8s; /* Firefox */
+                                        -webkit-animation: hovercolor 0.8s;  /* Safari 和 Chrome */
+                                        -o-animation: hovercolor 0.8s;   /* Opera */
+                                        -webkit-animation-fill-mode:forwards;
+                                    }
+                                }
+                                &:before {
+                                    content:"";
+                                    width:10px;
+                                    height:40px;
+                                    background:url("../../../static/images/color_hover_img.png") no-repeat;
+                                    float:left;
+                                    margin-left:-10px;
+                                }
+                                input {
+                                    -khtml-opacity:0;
+                                    -moz-opacity:0;
+                                    filter:alpha(opacity=0);
+                                    opacity:0; 
+                                    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);/*兼容ie8及以下*/
+                                }
+                                .color_block {
+                                    float:left;
+                                    margin:10px 0;
+                                    span {
+                                        width:18px;
+                                        height:18px;
+                                        border:1px solid #fff;
+                                        float:left;
+                                        margin-left:10px;
+                                    }
+                                }
+                                .color_checked {
+                                    float:right;
+                                    margin:9px 10px 9px 0;
+                                    em {
+                                        color:#3b8efe;
+                                        float:left;
+                                    }
+                                    i {
+                                        color:#617d98;
+                                        font-size:20px;
+                                        margin-left:10px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

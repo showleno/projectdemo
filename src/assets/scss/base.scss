@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    overflow: hidden;
 }
 
 @mixin boxSizing() {
@@ -79,10 +78,12 @@ body {
     .right {
         float: right;
     }
-    .page, .field {
+    .page {
         position: relative;
     }
-    .edit:hover:after {
+    .edit:hover:after,
+    .addMod:hover:after,
+    .moveMod:hover:after {
         content:"";
         position:absolute;
         top:0;
@@ -136,8 +137,8 @@ body {
         }
     }
     .loadHtml {
-        overflow-x: hidden;
-        overflow-y: auto;
+        // overflow-x: hidden;
+        // overflow-y: auto;
     }
     .nav_text_color {
         color: #fff;
@@ -468,6 +469,9 @@ body {
                 }
                 .isShow {
                     margin-left: 20px;
+                    span {
+                        width: 50px;
+                    }
                 }
             }
         }
@@ -503,5 +507,133 @@ body {
             }
         }
     }
+    
+}
 
+// 布局宽度
+.wid240 {
+    width: 240px;
+}
+.wid320 {
+    width: 320px;
+}
+.wid480 {
+    width: 480px;
+}
+.wid485 {
+    width: 485px;
+}
+.wid730 {
+    width: 730px;
+}
+.wid980 {
+    width: 980px;
+}
+
+// 推荐颜色
+/*推荐颜色组*/
+.c_2b2e4a {background-color:#2b2e4a;}
+.c_903749 {background-color:#903749;}
+
+.c_38817a {background-color:#38817a;}
+.c_56bfb5 {background-color:#56bfb5;}
+
+.c_484cb0 {background-color:#484cb0;}
+.c_526ed0 {background-color:#526ed0;}
+
+.c_655989 {background-color:#655989;}
+.c_de88a5 {background-color:#de88a5;}
+
+.c_222831 {background-color:#222831;}
+.c_393e46 {background-color:#393e46;}
+
+.c_5e1043 {background-color:#5e1043;}
+.c_a13f80 {background-color:#a13f80;}
+
+.c_c83b4c {background-color:#c83b4c;}
+.c_f75b5b {background-color:#f75b5b;}
+
+.c_1a2634 {background-color:#1a2634}
+.c_203e5f {background-color:#203e5f;}
+
+.c_b42b3f {background-color:#b42b3f;}
+.c_e42f45 {background-color:#e42f45;}
+
+/**/
+.c_a66d53 {background-color:#a66d53;}
+.c_c98c70 {background-color:#c98c70;}
+
+.c_3f4c48 {background-color:#3f4c48;}
+.c_95977a {background-color:#95977a;}
+
+.c_062c80 {background-color:#062c80;}
+.c_0e6ac7 {background-color:#0e6ac7;}
+
+.c_46265c {background-color:#46265c;}
+.c_794d9a {background-color:#794d9a;}
+
+.c_543d46 {background-color:#543d46;}
+.c_5da7ae {background-color:#5da7ae;}
+
+.c_8d0033 {background-color:#8d0033;}
+.c_bd3246 {background-color:#bd3246;}
+
+.c_2f2342 {background-color:#2f2342;}
+.c_e42f45 {background-color:#e42f45;}
+
+.c_6f3826 {background-color:#6f3826;}
+.c_b84a39 {background-color:#b84a39;}
+
+.c_333a7b {background-color:#333a7b;}
+.c_4b6982 {background-color:#4b6982;}
+
+.c_266352 {background-color:#266352;}
+.c_128061 {background-color:#128061;}
+
+.c_0c3c78 {background-color:#0c3c78;}
+.c_04879c {background-color:#04879c;}
+
+.c_0066cc {background-color:#0066cc;}
+.c_0099ff {background-color:#0099ff;}
+
+.c_634258 {background-color:#634258;}
+.c_6d6087 {background-color:#6d6087;}
+
+.c_314357 {background-color:#314357;}
+.c_456672 {background-color:#456672;}
+
+.c_083d56 {background-color:#083d56;}
+.c_0e5f76 {background-color:#0e5f76;}
+
+.c_303242 {background-color:#303242;}
+.c_394359 {background-color:#394359;}
+
+.c_504077 {background-color:#504077;}
+.c_924992 {background-color:#924992;}
+
+.c_cd4439 {background-color:#cd4439;}
+.c_72b896 {background-color:#72b896;}
+
+@keyframes hovercolor
+{
+from {margin-left:-10px;}
+to {margin-left:10px;}
+}
+
+@-moz-keyframes hovercolor /* Firefox */
+{
+from {margin-left:-10px;}
+to {margin-left:10px;}
+}
+
+@-webkit-keyframes hovercolor /* Safari 和 Chrome */
+{
+from {margin-left:-10px;}
+to {margin-left:10px;}
+}
+
+@-o-keyframes hovercolor /* Opera */
+{
+from {margin-left:-10px;}
+to {margin-left:10px;}
 }
